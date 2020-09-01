@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap");
+
+@font-face {
+  font-family: Gilroy;
+  src: url(fonts/Gilroy-Light.otf);
+}
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url(fonts/Gilroy-ExtraBold.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Gilroy;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+#header-hero {
+  background: url(illustration.png) bottom right/60% no-repeat,
+    linear-gradient(0deg, #98c3e8 8.84%, rgba(152, 195, 232, 0) 31.12%);
+  height: 100vh;
+}
+/* hamburger menu */
+nav {
+  height: 10vh;
+  position: fixed;
+  display: flex;
+  /* align-items: center; */
+  width: 100%;
+  z-index: 999;
+  padding: 0.5em 1em;
+}
+nav button {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background: none;
+  outline: none;
+  border: none;
+}
+aside {
+  position: relative;
+}
+aside ul {
+  background: #1f3f68;
+  width: 30%;
+  height: 100vh;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  transition: all 1s ease;
+}
+aside ul a {
+  color: white;
+  font-size: 1.5em;
+}
+.show-nav {
+  right: 0;
+}
+.intro {
+  padding-top: 20vh;
+  padding-left: 5%;
+}
+.intro h1 {
+  font-size: 4em;
+  padding-bottom: 3vh;
+  width: 50%;
+  color: #1f3f68;
+  font-family: "PT Serif", serif;
+}
+.intro p {
+  color: #1f3f68;
+  line-height: 1.5;
+  padding-bottom: 4vh;
+  width: 35%;
+  font-family: Gilroy;
+  padding-bottom: 7vh;
+}
+.btn {
+  background: #5a98d0;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  border-radius: 10px;
+  color: white;
+  padding: 0.7em 1.5em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: all 0.5s ease;
+}
+.btn:hover {
+  color: white;
+}
+/* cards what we do */
+#what {
+  padding: 10vh 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#what article {
+  width: 65%;
+  margin: 2vh auto;
+}
+.card {
+  box-shadow: 0 10px 40px -14px #316099;
+  text-align: center;
+  padding: 8vh 5%;
+  border-radius: 10px;
+}
+.card img,
+.card h3,
+.card p {
+  padding-bottom: 3vh;
+}
+.card a {
+  color: #5a98d0;
+  font-size: 1.1em;
+}
+#what article h2 {
+  width: 70%;
+  color: #316099;
+  font-size: 2em;
+  margin-top: -25vh;
+  margin-left: -25%;
+}
+.flex-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* our finished project */
+#project {
+  padding: 10vh 10%;
+}
+#project article:nth-of-type(1) {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  padding-bottom: 5vh;
+  color: #1f3f68;
+}
+#project article:nth-of-type(1) p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+/* smart home instalation */
+#project article:nth-of-type(2) {
+  background: url(hero1.png) center/cover no-repeat;
+  height: 60vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 5vh;
+  padding-right: 5%;
+  border-radius: 10px;
+  margin-bottom: 10vh;
+}
+#project article:nth-of-type(2) h3 {
+  font-size: 1.8em;
+  padding-bottom: 2vh;
+}
+#project article:nth-of-type(2) p {
+  font-size: 1.2em;
+}
+
+#project article:nth-of-type(3) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5em;
+  color: white;
+}
+#project article:nth-of-type(3) div {
+  width: 100%;
+  height: 50vh;
+  border-radius: 10px;
+}
+#project article:nth-of-type(3) div:nth-of-type(1) {
+  background: url(hero2.png) center/cover no-repeat;
+}
+#project article:nth-of-type(3) div:nth-of-type(2) {
+  background: url(hero3.png) center/cover no-repeat;
+}
+#project article:nth-of-type(3) div h3 {
+  font-size: 1.8em;
+  padding: 5vh 0 2vh 5%;
+}
+#project article:nth-of-type(3) div p {
+  font-size: 1.2em;
+  padding-left: 5%;
+}
+/* our beloved client */
+#client {
+  background: #5a98d0;
+  border-radius: 200px 0 0 0;
+  /* padding: 10vh 10%; */
+}
+#client article:nth-of-type(1) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  padding: 10vh 10%;
+}
+#client article:nth-of-type(1) p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+/* logos grid */
+#client article:nth-of-type(2) {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  margin: 5vh 10% 10vh 10%;
+  /* grid inner borders */
+  grid-gap: 1px;
+  background: white;
+}
+#client article:nth-of-type(2) div {
+  padding: 2em;
+  background: #5a98d0;
+}
+/* interested to work */
+#team {
+  background: #316099;
+  border-radius: 0px 200px 0px 0px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+#team div:nth-of-type(1) {
+  padding: 10vh 10%;
+  width: 65%;
+  line-height: 1.5;
+  color: white;
+  font-size: 1.1em;
+  padding-left: 15%;
+}
+#team div:nth-of-type(1) h2 {
+  padding-bottom: 3vh;
+}
+#team div:nth-of-type(1) p {
+  color: rgba(255, 255, 255, 0.5);
+}
+/* footer */
+footer {
+  background: #316099;
+  color: white;
+  width: 90%;
+  padding: 0 10%;
+}
+footer div:nth-of-type(1) {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 2em;
+  padding: 5vh 0;
+}
+footer ul {
+  list-style-type: none;
+}
+footer ul li {
+  padding: 1vh 0;
+}
+footer ul li span {
+  font-family: Gilroy-Bold;
+  padding-right: 1em;
+}
+footer ul li a {
+  color: white;
+}
+footer ul li:first-child {
+  font-family: Gilroy-Bold;
+  letter-spacing: 2px;
+}
+.copyright {
+  padding-bottom: 5vh;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.line {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  width: 90%;
+}
+
+/* BLOG PAGE */
+#header-blog {
+  background: url(title-bg.png) center/contain no-repeat;
+  height: 40vh;
+}
+/* #blog-section {
+  padding: 5vh 10%;
+}
+.search-wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 5vh;
+}
+#search {
+  width: 100%;
+  height: 5vh;
+  background: #f4f4f4;
+  padding: 1em;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+::placeholder {
+  font-family: Gilroy;
+}
+#blog article:nth-of-type(1) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} */
